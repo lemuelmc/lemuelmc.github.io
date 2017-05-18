@@ -59,11 +59,11 @@
    const notificationTitle = 'Background Message Title';
    const notificationOptions = {
      body: payload.notification.body,
-     icon: '/firebase-logo.png',
-     image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
+     icon: 'firebase-logo.png',
+     image: 'images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
    };
 
-   return self.registration.showNotification(notificationTitle,
+   return self.registration.showNotification(payload.notification.title,
        notificationOptions);
  });
 // [END background_handler]

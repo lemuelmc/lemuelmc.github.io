@@ -205,6 +205,16 @@
                             // Update the UI to include the received message.
                             appendMessage(payload);
                             // [END_EXCLUDE]
+                            // Customize notification here
+                            const notificationTitle = 'Background Message Title';
+                            const notificationOptions = {
+                              body: payload.notification.body,
+                              icon: '/firebase-logo.png',
+                              image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
+                            };
+
+                            return self.registration.showNotification(notificationTitle,
+                                notificationOptions);
                         });
                         // [END receive_message]
                         function resetUI() {

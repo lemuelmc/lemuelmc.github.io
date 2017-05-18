@@ -60,7 +60,19 @@
    const notificationOptions = {
         body: payload.notification.body,
         icon: 'https://lemuelmc.github.io/images/demos/icon-512x512.png',
-        image: 'https://lemuelmc.github.io/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
+        image: 'https://lemuelmc.github.io/images/demos/unsplash-farzad-nazifi-1600x1100.jpg',
+        actions: [
+            {
+              action: 'coffee-action',
+              title: 'Coffee',
+              icon: 'https://lemuelmc.github.io/images/demos/action-1-128x128.png'
+            },
+            {
+              action: 'doughnut-action',
+              title: 'Doughnut',
+              icon: 'https://lemuelmc.github.io/images/demos/action-2-128x128.png'
+            }
+        ]
    };
 
    return self.registration.showNotification(payload.notification.title,

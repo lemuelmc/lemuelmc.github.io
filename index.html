@@ -261,8 +261,7 @@
                                         $.ajax({
                                             url: 'https://iid.googleapis.com/iid/v1/'+currentToken+'/rel/topics/lemuelfans',
                                             contentType: "application/json; charset=utf-8",
-                                            type:'post',
-                                            method:'post',
+                                            method:'POST',
                                             beforeSend: function(xhr){
                                                 xhr.setRequestHeader("Authorization","key=AIzaSyB3C8-UytZtqLRdvRF4pr2yaxPq145reOk");
                                             }

@@ -208,9 +208,11 @@
 
                             const title = 'Image Notification';
                             const options = {
-                                image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
+                                image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg',
+                                body: payload.notification.body
+                                
                             };
-                            registration.showNotification(title, options);
+                            messaging.showNotification(title, options);
                         });
                         // [END receive_message]
                         function resetUI() {

@@ -167,6 +167,12 @@
       // Update the UI to include the received message.
       appendMessage(payload);
       // [END_EXCLUDE]
+
+      const title = 'Image Notification';
+      const options = {
+        image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
+      };
+      registration.showNotification(title, options);
     });
     // [END receive_message]
     function resetUI() {

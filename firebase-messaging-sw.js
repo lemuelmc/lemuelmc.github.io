@@ -58,9 +58,9 @@
    // Customize notification here
    const notificationTitle = 'Background Message Title';
    const notificationOptions = {
-     body: payload.notification.body,
-     icon: 'firebase-logo.png',
-     image: 'images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
+        body: payload.notification.body,
+        icon: 'images/demos/icon-512x512.png',
+        image: 'images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
    };
 
    return self.registration.showNotification(payload.notification.title,

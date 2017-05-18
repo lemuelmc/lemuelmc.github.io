@@ -259,8 +259,10 @@
                                     // Subscribe to a topic
                                     $(document).ready(function(){
                                         $.ajax({
-                                            url: 'https://iid.googleapis.com/iid/v1/'+currentToken+'/rel/topics/subscribers',
+                                            url: 'https://iid.googleapis.com/iid/v1/'+currentToken+'/rel/topics/lemuelfans',
                                             contentType: "application/json; charset=utf-8",
+                                            type:'post',
+                                            method:'post',
                                             beforeSend: function(xhr){
                                                 xhr.setRequestHeader("Authorization","key=AIzaSyB3C8-UytZtqLRdvRF4pr2yaxPq145reOk");
                                             }

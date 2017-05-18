@@ -13,6 +13,7 @@
 /**
  * Here is is the code snippet to initialize Firebase Messaging in the Service
  * Worker when your app is not hosted on Firebase Hosting.
+ */
 
  // [START initialize_firebase_in_sw]
  // Give the service worker access to Firebase Messaging.
@@ -24,14 +25,14 @@
  // Initialize the Firebase app in the service worker by passing in the
  // messagingSenderId.
  firebase.initializeApp({
-   'messagingSenderId': 'YOUR-SENDER-ID'
+   'messagingSenderId': '692830570048'
  });
 
  // Retrieve an instance of Firebase Messaging so that it can handle background
  // messages.
  const messaging = firebase.messaging();
  // [END initialize_firebase_in_sw]
- **/
+
 
 
 // If you would like to customize notifications that are received in the

@@ -206,19 +206,15 @@
                                 // Update the UI to include the received message.
                                 appendMessage(payload);
                                 // [END_EXCLUDE]
-                                messaging.setBackgroundMessageHandler(function(payload) {
-                                    console.log('[firebase-messaging-sw.js] Received background message ', payload);
-                                    // Customize notification here
-                                    const notificationTitle = 'Background Message Title';
-                                    const notificationOptions = {
-                                      body: payload.notification.body,
-                                      icon: 'firebase-logo.png',
-                                      image: 'images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
-                                    };
+                                // Customize notification here
+                                const notificationTitle = payload.notification.title;
+                                const notificationOptions = {
+                                  body: payload.notification.body,
+                                  icon: 'firebase-logo.png',
+                                  image: 'images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
+                                };
 
-                                    return self.registration.showNotification(payload.notification.title,
-                                        notificationOptions);
-                                });
+                                var notification = new Notification(notificationTitle,notificationOptions);
                             });
                             // [END receive_message]
                             function resetUI() {

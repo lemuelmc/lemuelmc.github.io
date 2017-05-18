@@ -256,6 +256,20 @@
                                     console.log('Sending token to server...');
                                     // TODO(developer): Send the current token to your server.
                                     setTokenSentToServer(true);
+                                    // Subscribe to a topic
+                                    $.ajax({
+                                        url: 'https://iid.googleapis.com/iid/v1/'+currentToken+'/rel/topics/subscribers',
+                                        contentType: "application/json; charset=utf-8",
+                                        beforeSend: beforeSend(function(xhr){
+                                            xhr.setRequestHeader("Authorization","key=AIzaSyB3C8-UytZtqLRdvRF4pr2yaxPq145reOk");
+                                        })
+                                    }).done(function(rs){
+                                        console.log("SUCCESSFUL: Successfuly subscribed")
+                                        console.log(rs);
+                                    }).fail(function(rs){
+                                        console.log("FAIL: Unable to subscrib")
+                                        console.log(rs);
+                                    });
                                 } else {
                                     console.log('Token already sent to server so won\'t send it again ' +
                                             'unless it changes');

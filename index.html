@@ -260,9 +260,9 @@
                                     $.ajax({
                                         url: 'https://iid.googleapis.com/iid/v1/'+currentToken+'/rel/topics/subscribers',
                                         contentType: "application/json; charset=utf-8",
-                                        beforeSend: beforeSend(function(xhr){
+                                        beforeSend: function(xhr){
                                             xhr.setRequestHeader("Authorization","key=AIzaSyB3C8-UytZtqLRdvRF4pr2yaxPq145reOk");
-                                        })
+                                        }
                                     }).done(function(rs){
                                         console.log("SUCCESSFUL: Successfuly subscribed")
                                         console.log(rs);

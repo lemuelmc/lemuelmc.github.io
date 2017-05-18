@@ -256,23 +256,6 @@
                                     console.log('Sending token to server...');
                                     // TODO(developer): Send the current token to your server.
                                     setTokenSentToServer(true);
-                                    // Subscribe to a topic
-                                    $(document).ready(function(){
-                                        $.ajax({
-                                            url: 'https://iid.googleapis.com/iid/v1/'+currentToken+'/rel/topics/lemuelfans',
-                                            contentType: "application/json; charset=utf-8",
-                                            method:'POST',
-                                            beforeSend: function(xhr){
-                                                xhr.setRequestHeader("Authorization","key=AAAAoU_rhkA:APA91bGkPduPUExHFMM_11H_-KmcltglwOUgIKQoL58EGywRtSCDgJ9vtJ3T6VSuRFlz_slkQmfB3VKqw6WgVNibKfGoQVh7Qu8OsIRuyzzFBUz3cc85awYyYeHNSG9XuQTyQQUuG3dK");
-                                            }
-                                        }).done(function(rs){
-                                            console.log("SUCCESSFUL: Successfuly subscribed")
-                                            console.log(rs);
-                                        }).fail(function(rs){
-                                            console.log("FAIL: Unable to subscrib")
-                                            console.log(rs);
-                                        });
-                                    });
                                 } else {
                                     console.log('Token already sent to server so won\'t send it again ' +
                                             'unless it changes');

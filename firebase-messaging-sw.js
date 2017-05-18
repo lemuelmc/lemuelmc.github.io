@@ -52,3 +52,19 @@
 //       notificationOptions);
 // });
 // [END background_handler]
+
+// [START background_handler]
+ messaging.setBackgroundMessageHandler(function(payload) {
+   console.log('[firebase-messaging-sw.js] Received background message ', payload);
+   // Customize notification here
+   const notificationTitle = 'Background Message Title';
+   const notificationOptions = {
+     body: payload.notification.body,
+     icon: '/firebase-logo.png',
+     image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
+   };
+
+   return self.registration.showNotification(notificationTitle,
+       notificationOptions);
+ });
+// [END background_handler]

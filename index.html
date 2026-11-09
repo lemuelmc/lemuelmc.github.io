@@ -1,99 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Fixed Top Navbar Example for Bootstrap</title>
+  <!-- Begin Jekyll SEO tag v2.9.1 -->
+<title>Home | Lemuel</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="Lemuel" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Personal site of Lemuel — projects, writing, and experiments." />
+<meta name="twitter:description" property="og:description" content="Personal site of Lemuel — projects, writing, and experiments." />
+<link rel="canonical" href="https://lemuelmc.github.io/" />
+<meta property="og:url" content="https://lemuelmc.github.io/" />
+<meta property="og:site_name" content="Lemuel" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Lemuel","url":"https://github.com/lemuelmc"},"description":"Personal site of Lemuel — projects, writing, and experiments.","headline":"Home","name":"Lemuel","url":"https://lemuelmc.github.io/"}</script>
+<!-- End Jekyll SEO tag -->
 
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <link type="application/atom+xml" rel="alternate" href="https://lemuelmc.github.io/feed.xml" title="Lemuel" />
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/main.css">
 
-    <!-- Custom styles for this template -->
-    <link href="navbar-fixed-top.css" rel="stylesheet">
+  <script>
+    // Set the theme before first paint to avoid a flash of the wrong theme.
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) { /* storage unavailable — fall back to CSS system preference */ }
+    })();
+  </script>
+  <script src="/assets/js/theme.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="/">Lemuel</a>
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/" class="is-active" aria-current="page">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/blog/">Blog</a>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+  <!-- Sun: shown in dark mode, click switches to light -->
+  <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="5"/>
+    <line x1="12" y1="1" x2="12" y2="3"/>
+    <line x1="12" y1="21" x2="12" y2="23"/>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+    <line x1="1" y1="12" x2="3" y2="12"/>
+    <line x1="21" y1="12" x2="23" y2="12"/>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+  </svg>
+  <!-- Moon: shown in light mode, click switches to dark -->
+  <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+  </svg>
+</button>
 
-  <body>
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
-
-    <div class="container">
-
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-      </div>
-
-    </div> <!-- /container -->
+  </div>
+</header>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+  <main class="container">
+    <section class="hero">
+  <img class="hero__photo" src="/images/me.jpg" alt="Portrait of Lemuel" width="128" height="128">
+  <div class="hero__text">
+    <h1>Lemuel</h1>
+    <p class="hero__tagline">TODO: a one-line tagline about yourself</p>
+    <p class="hero__bio">TODO: Replace with a short bio — a few sentences about who you are, what you build, and what you are interested in.</p>
+    
+
+<ul class="social-links">
+  
+  <li>
+    <a href="https://github.com/lemuelmc" aria-label="GitHub" title="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+      </svg>
+    </a>
+  </li>
+  
+  
+  
+  
+</ul>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Featured projects</h2>
+  <div class="project-grid">
+    
+    
+    
+<article class="project-card">
+  <h3 class="project-card__title">
+    
+    <a href="https://lemuelmc.github.io/myriad-frame/" rel="noopener">Myriad Frame</a>
+    
+  </h3>
+
+  <p class="project-card__description">An interactive web experiment — open the live site to see it in action.</p>
+
+  
+  <ul class="project-card__tags">
+    
+    <li>web</li>
+    
+  </ul>
+  
+
+  <div class="project-card__links">
+    
+    <a class="btn" href="https://lemuelmc.github.io/myriad-frame/" rel="noopener">Live site</a>
+    
+    
+    <a class="btn btn--ghost" href="https://github.com/lemuelmc/myriad-frame" rel="noopener">Source</a>
+    
+  </div>
+</article>
+
+    
+    
+  </div>
+  <p class="section__more"><a href="/projects/">All projects &rarr;</a></p>
+</section>
+
+<section class="section">
+  <h2>Latest posts</h2>
+  <ul class="post-list">
+    
+    <li class="post-list__item">
+      <h3 class="post-list__title"><a href="/blog/2026/11/09/hello-and-welcome/">Hello, World! Welcome to my Digital Workshop</a></h3>
+      <p class="post-list__meta"><time datetime="2026-11-09T12:00:00+08:00">November 9, 2026</time></p>
+      <p class="post-list__excerpt">Welcome to my digital workshop—a space where ideas are prototyped, projects are built, and thoughts are documented. This is my personal corner of the web, de...</p>
+    </li>
+    
+  </ul>
+  <p class="section__more"><a href="/blog/">All posts &rarr;</a></p>
+</section>
+
+
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span>&copy; 2026 Lemuel</span>
+    <span><a href="/feed.xml">RSS</a> &middot; <a href="https://github.com/lemuelmc">GitHub</a></span>
+  </div>
+</footer>
+
+</body>
 </html>

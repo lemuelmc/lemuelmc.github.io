@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lemuelmc.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lemuelmc.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-11-09T14:56:37+08:00</updated><id>https://lemuelmc.github.io/feed.xml</id><title type="html">Lemuel</title><subtitle>Personal site of Lemuel — projects, writing, and experiments.</subtitle><author><name>Lemuel</name></author><entry><title type="html">Hello, World! Welcome to my Digital Workshop</title><link href="https://lemuelmc.github.io/blog/2026/11/09/hello-and-welcome/" rel="alternate" type="text/html" title="Hello, World! Welcome to my Digital Workshop" /><published>2026-11-09T12:00:00+08:00</published><updated>2026-11-09T12:00:00+08:00</updated><id>https://lemuelmc.github.io/blog/2026/11/09/hello-and-welcome</id><content type="html" xml:base="https://lemuelmc.github.io/blog/2026/11/09/hello-and-welcome/"><![CDATA[<p>Welcome to my digital workshop—a space where ideas are prototyped, projects are built, and thoughts are documented. This is my personal corner of the web, dedicated to the joy of creation.</p>
+
+<h2 id="the-inventory">The Inventory</h2>
+
+<ul>
+  <li><strong>Projects</strong>: A showcase of digital artifacts. From polished tools to experimental builds, you can explore them all on the <a href="/projects/">Projects page</a>.</li>
+  <li><strong>Writing</strong>: A collection of logs, technical deep-dives, and explorations into the <em>why</em> and <em>how</em> of my work.</li>
+  <li><strong>Experiments</strong>: A playground for interactive ideas, like <a href="https://lemuelmc.github.io/myriad-frame/">Myriad Frame</a>, where I test the limits of a single idea.</li>
+</ul>
+
+<h2 id="the-philosophy">The Philosophy</h2>
+
+<p>I believe in simplicity and control. This site is built to be lightweight, fast, and version-controlled. No heavy databases or complex management systems—just clean Markdown and hand-crafted Sass. By keeping everything in a Git repository, I ensure that my digital home remains as enduring and transparent as the code I write.</p>
+
+<h2 id="the-horizon">The Horizon</h2>
+
+<p>The journey is just beginning. I’ll be posting regularly as I work through new projects and discover new tools. If you spot a glitch in the matrix, please <a href="https://github.com/lemuelmc/lemuelmc.github.io">let me know on GitHub</a>.</p>
+
+<p>Thanks for stopping by.</p>]]></content><author><name>Lemuel</name></author><summary type="html"><![CDATA[Welcome to my digital workshop—a space where ideas are prototyped, projects are built, and thoughts are documented. This is my personal corner of the web, dedicated to the joy of creation.]]></summary></entry></feed>
